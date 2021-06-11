@@ -118,10 +118,26 @@ python-versions = ">=3.6"
 [package.extras]
 watchdog = ["watchdog"]
 
+[[package]]
+name = "wtforms"
+version = "2.3.3"
+description = "A flexible forms validation and rendering library for Python web development."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+MarkupSafe = "*"
+
+[package.extras]
+email = ["email-validator"]
+ipaddress = ["ipaddress"]
+locale = ["Babel (>=1.3)"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "16281f16d319c2fa674a633e0237637fbcb23af2ce295d7dbc39bd5a6d540b9b"
+content-hash = "400f25b1cee42786e0a7c9ef628230c411e44bfa6b6fa28f3ec3a4b6c2126a67"
 
 [metadata.files]
 click = [
@@ -266,4 +282,8 @@ sqlalchemy = [
 werkzeug = [
     {file = "Werkzeug-2.0.1-py3-none-any.whl", hash = "sha256:6c1ec500dcdba0baa27600f6a22f6333d8b662d22027ff9f6202e3367413caa8"},
     {file = "Werkzeug-2.0.1.tar.gz", hash = "sha256:1de1db30d010ff1af14a009224ec49ab2329ad2cde454c8a708130642d579c42"},
+]
+wtforms = [
+    {file = "WTForms-2.3.3-py2.py3-none-any.whl", hash = "sha256:7b504fc724d0d1d4d5d5c114e778ec88c37ea53144683e084215eed5155ada4c"},
+    {file = "WTForms-2.3.3.tar.gz", hash = "sha256:81195de0ac94fbc8368abbaf9197b88c4f3ffd6c2719b5bf5fc9da744f3d829c"},
 ]

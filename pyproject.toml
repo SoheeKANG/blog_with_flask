@@ -8,6 +8,7 @@ authors = ["SoheeKANG <hnb4831@naver.com>"]
 python = "^3.8"
 Flask = "^2.0.1"
 SQLAlchemy = "^1.4.17"
+WTForms = "^2.3.3"
 
 [tool.poetry.dev-dependencies]
 

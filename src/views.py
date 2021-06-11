@@ -1,8 +1,14 @@
-from flask import render_template, current_app
-from .routes import homebp
+from flask import Blueprint
 
 
-@homebp.route('/')
+home_bp = Blueprint('home', __name__, url_prefix='/')
+
+
+@home_bp.route('/')
 def home():
-    current_app.logger.info("home page loading")
-    return render_template('home.html')
+    return "Home"
+
+
+@home_bp.route('/test')
+def test():
+    return 'test_page'

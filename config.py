@@ -1,3 +1,6 @@
-DEBUG = False
-SECRET_KEY = 'develop'
-LOCAL_RUN_SETTING = {"host": "localhost", "port": 5000}
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+
+SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(BASE_DIR, 'basic.db'))
+SQLALCHEMY_TRACK_MODIFICATIONS = False
