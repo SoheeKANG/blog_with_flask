@@ -1,8 +1,4 @@
-import hashlib
-import secrets
-import datetime
 from dataclasses import dataclass
-from flask import current_app, has_request_context
 from sqlalchemy import Column, Integer, Text, TIMESTAMP
 
 
@@ -23,13 +19,3 @@ class Post:
     def __init__(self, name=None, email=None):
         self.name = name
         self.email = email
-
-
-def search(keyword: str, limit: int = 10, offset: int = 0):
-    """
-    :param keyword:
-    :param limit:
-    :param offset:
-    :return:
-    """
-    csr = current_app

@@ -12,3 +12,6 @@ def home():
 @home_bp.route('/test')
 def test():
     return 'test_page'
+
+
+

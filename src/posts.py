@@ -1,7 +1,4 @@
-import os
-import sys
-import json
-from flask import Blueprint, current_app, url_for, request
+from flask import Blueprint, url_for
 
 
 post_bp = Blueprint(__name__, "posts")
