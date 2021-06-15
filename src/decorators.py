@@ -1,8 +1,11 @@
 import functools
+from flask import g, redirect, url_for
 
 
-def login_required():
-    @functools.wraps()
+def login_required(view):
+    @functools.wraps(view)
     def wrapped_view(**kwargs):
-        pass
+        if g.admin is None:
+            return redirect(url_for('auth.login'))
+        return view(**kwargs)
     return wrapped_view

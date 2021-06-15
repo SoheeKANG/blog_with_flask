@@ -1,13 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 import config
 
 
 def create_app():
     app = Flask(__name__)
 
-    app.config.from_object(config)
+    app.config.from_pyfile(config)
 
-    from .views import home_bp
-    app.register_blueprint(home_bp)
+    @app.route('/')
+    def index():
+        return render_template('index.html')
 
     return app
